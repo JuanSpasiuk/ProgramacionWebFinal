@@ -13,9 +13,6 @@ body {
 }
 
 
-
-
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -46,7 +43,6 @@ body {
 }
 
 
-
 .hero {
   position: relative;
   height: 65vh;
@@ -63,7 +59,7 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
-  pointer-events: none; /* 👈 CLAVE */
+  pointer-events: none; 
 }
 
 
@@ -128,7 +124,6 @@ body {
 
 
 
-
 .home-container {
   max-width: 1200px;
   margin: 60px auto;
@@ -178,7 +173,6 @@ body {
 
 
 
-
 .section-title {
   font-size: 22px;
   font-weight: 600;
@@ -192,7 +186,6 @@ body {
   gap: 80px 60px; 
   margin-top: 60px;
 }
-
 
 
 
@@ -211,7 +204,6 @@ body {
 
 
 
-
 .product-card img {
   width: 100%;
   max-width: 340px;
@@ -221,7 +213,6 @@ body {
   display: block;
   background: transparent;
 }
-
 
 
 
