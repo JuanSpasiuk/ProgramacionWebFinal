@@ -121,16 +121,4 @@ El control de seguridad se realiza en el backend.
 Si un usuario sin rol administrador intenta acceder a operaciones CRUD, la API responde con 403 – No autorizado.
 
 El frontend solo muestra botones de edición y eliminación si el usuario es administrador.
-_____________________________________________________
-Contexto académico
-Proyecto desarrollado con fines educativos, aplicando conceptos de:
 
-Desarrollo web full stack
-
-Arquitectura cliente-servidor
-
-Autenticación y autorización
-
-Consumo de API REST
-
-Manipulación dinámica del DOM
