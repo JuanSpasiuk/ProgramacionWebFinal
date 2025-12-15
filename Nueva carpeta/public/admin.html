@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin | Khalua</title>
+  <link rel="stylesheet" href="stylesheet/admin.css" />
+</head>
+<body>
+
+<h1>Panel de Administración</h1>
+
+
+<button class="btn-back" onclick="window.history.back()">Volver atrás</button>
+
+<section class="admin-form">
+  <h2>Agregar producto</h2>
+
+  <form id="form-producto">
+    <input type="text" id="nombre" placeholder="Nombre" required />
+    <input type="text" id="descripcion" placeholder="Descripción" />
+    <input type="number" id="precio" placeholder="Precio" required />
+    <input type="number" id="stock" placeholder="Stock" required />
+    <input type="text" id="imagen" placeholder="Imagen (ej: producto1.jpg)" />
+
+    <button type="submit">Guardar producto</button>
+  </form>
+</section>
+
+<hr>
+
+<section class="admin-productos">
+  <h2>Productos cargados</h2>
+  <div class="products-grid"></div>
+</section>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      const res = await fetch('/api/auth/me');
+
+      if (!res.ok) {
+        window.location.href = '/login.html';
+        return;
+      }
+
+      const data = await res.json();
+
+      if (data.user.rol !== 'admin') {
+        window.location.href = '/';
+      }
+    } catch (error) {
+      window.location.href = '/login.html';
+    }
+  });
+</script>
+
+<script src="scripts/admin.js"></script>
+
+</body>
+</html>
+
+
+

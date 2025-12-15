@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PalmaClo | Inicio</title>
+
+  <link rel="stylesheet" href="stylesheet/home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+  <header class="navbar">
+    <div class="brand">PalmaClo</div>
+    <nav class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#" id="logout">Cerrar sesión</a>
+    </nav>
+  </header>
+
+  
+  <section class="hero">
+  <div class="hero-content">
+    <h1>Bienvenido a Palma</h1>
+    <a href="/admin.html" class="btn-admin">Administrar productos</a>
+  </div>
+</section>
+
+  
+  <main class="home-container">
+
+    <section class="products-section">
+      <h2 class="section-title">Productos destacados</h2>
+
+      <div class="products-grid" id = "products-grid">
+
+        <div class="product-card">
+          <img src="../public/images/images/producto1.jpg" alt="Remera Juno Khalua">
+          <h3>Remera Juno</h3>
+          <p class="price">$32.000</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto2.jpg" alt="Remera Revolver Khalua">
+          <h3>Remera Revolver</h3>
+          <p class="price">$45.000</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto3.jpg" alt="Pantalón de Lino Khalua">
+          <h3>Pantalón de Lino</h3>
+          <p class="price">$70.000</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto4.jpg" alt="Pantalón Frek Stone Khalua">
+          <h3>Pantalón Frek Stone</h3>
+          <p class="price">$87.500</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto5.jpg" alt="Pantalón Massive Chesnut Khalua">
+          <h3>Pantalón Massive Chesnut</h3>
+          <p class="price">$90.000</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto6.jpg" alt="Campera Boxy Beige Khalua">
+          <h3>Campera Boxy Beige</h3>
+          <p class="price">$90.000</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto7.jpg" alt="Saco Gaban Corderito Khalua">
+          <h3>Saco Gaban Corderito</h3>
+          <p class="price">$120.000</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto8.jpg" alt="Jean Semi-Wide Negro Khalua">
+          <h3>Jean Semi-Wide Negro</h3>
+          <p class="price">$92.000</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto9.jpg" alt="Pack x3 Regular Remera Negra Khalua">
+          <h3>Pack x3 Regular Remera Negra</h3>
+          <p class="price">$63.000</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto10.jpg" alt="Cross Mini Bag Khalua">
+          <h3>Cross Mini Bag</h3>
+          <p class="price">$30.000</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto11.jpg" alt="Pulsera Ekon Khalua">
+          <h3>Pulsera Ekon</h3>
+          <p class="price">$4.875</p>
+        </div>
+
+        <div class="product-card">
+          <img src="../public/images/images/producto12.jpg" alt="Pack x3 Medias Lisa Blanca Khalua">
+          <h3>Pack x3 Medias Lisa Blanca</h3>
+          <p class="price">$4.875</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    document.getElementById('logout').addEventListener('click', async () => {
+      await fetch('/api/auth/logout', { method: 'POST' });
+      location.href = '/login';
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        <h3>Khalua</h3>
+        <p>Tienda de ropa urbana</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Seguinos</h4>
+        <a href="#" target="_blank">Instagram</a>
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">WhatsApp</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Khalua. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script src="/scripts/home.js"></script>
+  
+
+</body>
+</html>
+

@@ -1,0 +1,147 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general con imagen */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  min-height: 100vh;
+
+  /* Imagen de fondo + overlay oscuro */
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url('../images/images/bg-login.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Layout principal */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card */
+.login-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  max-width: 420px;
+  padding: 42px;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+
+  /* Efecto moderno sutil */
+  backdrop-filter: blur(3px);
+}
+
+/* Título */
+.login-title {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+/* Subtítulo */
+.login-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+/* Formulario */
+.login-form {
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Botón */
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-login:hover {
+  background-color: #000;
+}
+
+.btn-login:active {
+  transform: scale(0.97);
+}
+
+/* Link recuperar contraseña */
+.forgot-link {
+  display: block;
+  margin-top: 22px;
+  font-size: 13px;
+  color: #777;
+  text-decoration: none;
+  text-align: center;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 24px;
+  }
+
+  .login-title {
+    font-size: 26px;
+  }
+}
+
+

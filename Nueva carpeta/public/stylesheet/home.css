@@ -1,0 +1,354 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f7f7;
+  color: #111;
+}
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 48px;
+  background-color: #111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.nav-links a {
+  margin-left: 28px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #e5e5e5;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+
+
+.hero {
+  position: relative;
+  height: 65vh;
+  min-height: 420px;
+  background-image: url("../images/images/hero-khalua.jpg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: none; /* 👈 CLAVE */
+}
+
+
+.hero-content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  color: #2a2a2a;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: #ddd;
+  max-width: 420px;
+  margin-bottom: 28px;
+  color: ·#2a2a2a;
+  
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background-color: #fff;
+  color: #111;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.hero-btn:hover {
+  background-color: #f2f2f2;
+}
+
+.hero-btn:active {
+  transform: scale(0.97);
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    height: 55vh;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+.home-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 24px 80px;
+}
+
+
+.home-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.home-text {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 28px;
+}
+
+
+.home-actions {
+  margin-bottom: 50px;
+}
+
+.home-actions .btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 999px; /* pill */
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.home-actions .btn:hover {
+  background-color: #000;
+}
+
+
+
+
+.products-section {
+  margin-top: 80px;
+  padding: 0;
+}
+
+
+
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 80px 60px; 
+  margin-top: 60px;
+}
+
+
+
+
+.product-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  text-align: center;
+  box-shadow: none;
+  transition: transform 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+
+
+
+.product-card img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 22px;
+  display: block;
+  background: transparent;
+}
+
+
+
+
+.product-card h3 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 6px;
+  letter-spacing: 0.4px;
+}
+
+.product-card .price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 18px 24px;
+  }
+
+  .home-title {
+    font-size: 28px;
+  }
+}
+
+
+.footer {
+  background-color: #111;
+  padding: 56px 24px 28px;
+  color: #ccc;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-brand h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+.footer-links h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.footer-links a {
+  display: block;
+  font-size: 14px;
+  color: #cccccc;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #888888;
+  padding-top: 18px;
+  border-top: 1px solid #2a2a2a;
+}
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.btn-delete {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: #c62828;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #b71c1c;
+}
+
+
+
+.btn-back {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px; 
+}
+
+.btn-back:hover {
+  background-color: #0056b3;
+}
+
+
+
