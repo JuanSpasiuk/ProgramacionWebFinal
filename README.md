@@ -24,6 +24,26 @@ Abrir MySQL (Workbench o phpMyAdmin) y ejecutar el script correspondiente:
 source sql/schema.sql;
 
 Este script crea la base de datos palmaclo y las tablas necesarias para usuarios y productos.
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  rol ENUM('user', 'admin') DEFAULT 'user',
+);
+
+CREATE TABLE productos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(150) NOT NULL,
+  descripcion TEXT,
+  precio DECIMAL(10,2) NOT NULL,
+  imagen VARCHAR(255),
+  stock INT NOT NULL,
+  activo TINYINT(1) DEFAULT 1,
+  fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 ____________________________________________________
 
 ***** 2) Configurar variables de entorno ********
